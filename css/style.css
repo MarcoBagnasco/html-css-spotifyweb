@@ -162,13 +162,31 @@ ul{
     background-color: #282828;
 }
 .app-footer > div{
-    background-color: #999;
+    /* background-color: #999; */
 }
-.app-footer .current,
+.app-footer .left-footer,
 .app-footer .settings{
     flex-basis: 250px;
 }
 .app-footer .player{
     flex-basis: 35%;
+}
+/* Left Footer */
+.app-footer .left-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.left-footer .current{
+    display: flex;
+    align-items: center;
+}
+.left-footer .current img{
+    height: 40px;
+    margin-right: 10px;
+}
+.left-footer .left-footer-icons i:first-child{
+    margin-right: 10px;
 }
 
