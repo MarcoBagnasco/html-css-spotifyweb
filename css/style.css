@@ -28,6 +28,22 @@ ul{
 }
 .bold{
     font-weight: 600;
+
+}
+/* Stick */
+.stick{
+    position: relative;
+    border: 2px solid rgba(255, 255, 255, .4);
+    border-radius: 25px;
+}
+.stick::after{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 20%;
+    border: 2px solid #fff;
+    border-radius: 25px;
 }
 
 /* APP MAIN */
@@ -165,12 +181,13 @@ ul{
     /* background-color: #999; */
 }
 .app-footer .left-footer,
-.app-footer .settings{
+.app-footer .right-footer{
     flex-basis: 250px;
 }
-.app-footer .player{
+.app-footer .center-footer{
     flex-basis: 35%;
 }
+
 /* Left Footer */
 .app-footer .left-footer{
     display: flex;
@@ -190,3 +207,15 @@ ul{
     margin-right: 10px;
 }
 
+/* Right Footer */
+.app-footer .right-footer{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.app-footer .right-footer i{
+    margin-right: 15px;
+}
+.app-footer .right-footer .stick{
+    flex-grow: 1;
+}
