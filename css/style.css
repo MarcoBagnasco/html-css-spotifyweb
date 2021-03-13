@@ -177,14 +177,11 @@ ul{
     justify-content: space-between;
     background-color: #282828;
 }
-.app-footer > div{
-    /* background-color: #999; */
-}
 .app-footer .left-footer,
 .app-footer .right-footer{
     flex-basis: 250px;
 }
-.app-footer .center-footer{
+.app-footer .central-footer{
     flex-basis: 35%;
 }
 
@@ -193,7 +190,7 @@ ul{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 0 10px;
 }
 .left-footer .current{
     display: flex;
@@ -207,11 +204,48 @@ ul{
     margin-right: 10px;
 }
 
+/* Central Footer */
+.app-footer .central-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+}
+/* Player Icons */
+.central-footer .player-icons{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.central-footer .player-icons i{
+    margin-right: 20px;
+}
+.central-footer .player-icons i:last-child{
+    margin-right: 0;
+}
+.central-footer .player-icons #play{
+    padding: 0 8px;
+    font-size: 1.7rem;
+}
+/* Player Bar */
+.central-footer .player-bar{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.central-footer .player-bar span{
+    font-size: 0.6rem;
+}
+.central-footer .player-bar .stick{
+    margin: 0 5%;
+    flex-grow: 1;
+}
+
 /* Right Footer */
 .app-footer .right-footer{
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 0 10px;
 }
 .app-footer .right-footer i{
     margin-right: 15px;
