@@ -17,7 +17,13 @@ h2{
 ul{
     list-style: none;
 }
-
+li:hover{
+    color: #fff;
+    cursor: pointer;
+}
+i{
+    cursor: pointer;
+}
 /* UTILITIES */
 /* Text */
 .upper{
@@ -28,7 +34,6 @@ ul{
 }
 .bold{
     font-weight: 600;
-
 }
 /* Stick */
 .stick{
@@ -36,7 +41,7 @@ ul{
     border: 2px solid rgba(255, 255, 255, .4);
     border-radius: 25px;
 }
-.stick::after{
+.stick::before{
     content: '';
     position: absolute;
     top: -2px;
@@ -45,7 +50,35 @@ ul{
     border: 2px solid #fff;
     border-radius: 25px;
 }
+.stick::after{
+    display: none;
+    content: '';
+    position: absolute;
+    top: -7px;
+    left: 18%;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.stick:hover{
+    cursor: pointer;
+}
+.stick:hover::before{
+    border-color: #adff2f;
+}
+.stick:hover::after{
+    display: inline-block;
+}
+/* Hover */
+.hover-white:hover{
+    color: #fff;
+    cursor: pointer;
+}
+.bigger:hover{
+    transform: scale(1.1);
 
+}
 /* APP MAIN */
 .app-main{
     display: flex;
@@ -100,6 +133,9 @@ ul{
 .top-sidebar .side-menu li:not(:first-child) img{
     filter: brightness(.5);
 }
+.top-sidebar .side-menu li:hover img{
+    filter: brightness(1);
+}
 /* Playlist */
 .top-sidebar .create-playlist{
     display: flex;
@@ -116,6 +152,10 @@ ul{
     color: #000;
     background-color:  rgba(255, 255, 255, .4);
 }
+.top-sidebar .create-playlist:hover .plus-create{
+    background-color:  #fff;
+
+}
 .create-playlist .text-create{
     padding-left: 10px;
     font-size: 14px;
@@ -131,7 +171,7 @@ ul{
 
 /* Bottom Sidebar */
 .sidebar .bottom-sidebar{
-    height: 75px;
+    height: 80px;
     padding: 5px 20px;
 }
 /* Download */
@@ -145,6 +185,9 @@ ul{
     margin-right: 5px;
     vertical-align: middle;
     filter: brightness(.5);
+}
+.bottom-sidebar .download:hover img{
+    filter: brightness(1);
 }
 /* User */
 .bottom-sidebar .user{
@@ -226,7 +269,7 @@ ul{
     background-color: rgba(0, 0, 0, .3);
 }
 .fix-bar button{
-    margin-right: 10px;
+    margin-right: 25px;
     padding: 15px 40px;
     background-color: transparent;
     border: 2px solid #fff;
@@ -289,6 +332,30 @@ ul{
 .gallery .row-albums:last-child img{
     border-radius: 50%;
 }
+.album .cover{
+    position: relative;
+}
+.album .cover::after{
+    display: none;
+    content: "\f144";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 85px;
+    color: #fff;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+}
+.album .cover:hover{
+    cursor: pointer;
+}
+.album .cover:hover img{
+    filter: brightness(.4);
+}
+.album .cover:hover::after{
+    display: inline-block;
+}
 /* RESPONSIVE MAIN CONTENT*/
 /* 768px <= Screen < 1200px */
 @media screen and (max-width: 1199px){
@@ -312,7 +379,7 @@ ul{
 }
 .app-footer .left-footer,
 .app-footer .right-footer{
-    flex-basis: 250px;
+    flex-basis: 230px;
 }
 .app-footer .central-footer{
     flex-basis: 35%;
@@ -332,6 +399,9 @@ ul{
 .left-footer .current img{
     height: 40px;
     margin-right: 10px;
+}
+.left-footer .current h6:hover{
+    text-decoration: underline;
 }
 .left-footer .left-footer-icons i:first-child{
     margin-right: 10px;
