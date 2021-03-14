@@ -24,29 +24,75 @@
         <section class="sidebar">
             <!-- Top Sidebar -->
             <div class="top-sidebar">
-                <div class="logo">LOGO</div>
-                <nav>
+                <img class="logo" src="./img/logo.svg" alt="logo">
+                <!-- Side Menu -->
+                <nav class="side-menu">
                     <ul>
-                        <li>Lorem</li>
-                        <li>Lorem</li>
-                        <li>Lorem</li>
+                        <li class="txt-white">
+                            <img src="./img/home.svg" alt="home">
+                            Home
+                        </li>
+                        <li>
+                            <img src="./img/search.svg" alt="search">
+                            Cerca
+                        </li>
+                        <li>
+                            <img src="./img/libreria.svg" alt="library">
+                            La tua libreria
+                        </li>
                     </ul>
                 </nav>
-                <h4>PLAYLIST</h4>
-                <ul class="playlist">
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                    <li>Lorem</li>
-                </ul>
+                <!-- Playlist -->
+                <h4 class="txt-white">PLAYLIST</h4>
+                <div class="create-playlist">
+                    <div class="plus-create"><i class="fas fa-plus"></i></div>
+                    <span class="text-create">Crea Playlist</span>
+                </div>
+                <nav class="playlist">
+                    <ul>
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
+                    </ul>
+                </nav>
             </div>
 
             <!-- Bottom Sidebar -->
             <div class="bottom-sidebar">
-                <div class="user">Lorem</div>
+                <!-- Download -->
+                <div class="download">
+                    <img src="./img/download.svg" alt="download">
+                    Installa app
+                </div>
+                <!-- User -->
+                <div class="user txt-white bold">
+                    <div class="profile">
+                        <img src="./img/profile.svg" alt="">
+                    </div>
+                    John Doe
+                </div>
+            </div>
+        </section>
+        
+        <!-- MOBILE SIDEBAR -->
+        <section class="mobile-sidebar">
+            <!-- Top -->
+            <div class="top-mobile-sidebar">
+                <img class="logo-mobile" src="./img/logo-small.svg" alt="logo">
+                <img src="./img/home.svg" alt="home">
+                <img src="./img/search.svg" alt="search">
+                <img src="./img/libreria.svg" alt="library">
+            </div>
+            <!-- Bottom -->
+            <div class="bottom-mobile-sidebar">
+                <img src="./img/download.svg" alt="download">
+                <div class="profile">
+                    <img src="./img/profile.svg" alt="">
+                </div>
             </div>
         </section>
         
@@ -60,7 +106,7 @@
             <!-- Gallery -->
             <div class="gallery">
                 <!-- Gallery Menu -->
-                <div class="gallery-menu">
+                <nav class="gallery-menu">
                     <ul class="upper bold">
                         <li>in evidenza</li>
                         <li>podcast</li>
@@ -69,7 +115,7 @@
                         <li>nuove uscite</li>
                         <li>scopri</li>
                     </ul>
-                </div>
+                </nav>
 
                 <!-- Albums -->
                 <!-- First Row -->
