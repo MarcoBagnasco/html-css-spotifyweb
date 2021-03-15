@@ -6,24 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify Web</title>
 
-    <!-- Main Style -->
+    <!-- MAIN STYLE -->
     <link rel="stylesheet" href="./css/style.css">
     
-    <!-- Fonts -->
+    <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     
-    <!-- Icons -->
+    <!-- ICONS -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css' integrity='sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==' crossorigin='anonymous'/>
+
+    <!-- FAVICON -->
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
     
 </head>
 <body>
     <!-- APP MAIN -->
     <main class="app-main">
         <!-- SIDEBAR -->
-        <section class="sidebar">
+        <section class="sidebar ov-hidden">
+            
             <!-- Top Sidebar -->
-            <div class="top-sidebar">
+            <div class="top-sidebar ov-hidden">
                 <img class="logo" src="./img/logo.svg" alt="logo">
                 <!-- Side Menu -->
                 <nav class="side-menu">
@@ -43,13 +47,16 @@
                     </ul>
                 </nav>
                 <!-- Playlist -->
-                <h4 class="txt-white">PLAYLIST</h4>
+                <h4>PLAYLIST</h4>
                 <div class="create-playlist  hover-white">
                     <div class="plus-create"><i class="fas fa-plus"></i></div>
                     <span class="text-create">Crea Playlist</span>
                 </div>
-                <nav class="playlist">
+                <nav class="playlist ov-auto">
                     <ul>
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
                         <li>Nome Playlist</li>
                         <li>Nome Playlist</li>
                         <li>Nome Playlist</li>
@@ -70,7 +77,7 @@
                 </div>
                 <!-- User -->
                 <div class="user txt-white bold">
-                    <div class="profile">
+                    <div class="profile ov-hidden">
                         <img src="./img/profile.svg" alt="">
                     </div>
                     John Doe
@@ -79,7 +86,7 @@
         </section>
         
         <!-- MOBILE SIDEBAR -->
-        <section class="mobile-sidebar">
+        <section class="mobile-sidebar ov-hidden">
             <!-- Top -->
             <div class="top-mobile-sidebar">
                 <img class="logo-mobile" src="./img/logo-small.svg" alt="logo">
@@ -90,21 +97,21 @@
             <!-- Bottom -->
             <div class="bottom-mobile-sidebar">
                 <img src="./img/download.svg" alt="download">
-                <div class="profile">
+                <div class="profile ov-hidden">
                     <img src="./img/profile.svg" alt="">
                 </div>
             </div>
         </section>
 
         <!-- MAIN CONTENT -->
-        <section class="main-content">
+        <section class="main-content ov-hidden">
             <!-- Fix Bar-->
             <div class="fix-bar">
                 <button class="upper txt-white bold bigger">effettua l'upgrade</button>
             </div>
 
             <!-- Gallery -->
-            <div class="gallery">
+            <div class="gallery ov-auto">
                 <!-- Gallery Menu -->
                 <nav class="gallery-menu">
                     <ul class="upper bold">
@@ -119,85 +126,85 @@
 
                 <!-- Albums -->
                 <!-- First Row -->
-                <h2 class="txt-white">Recently played</h2>
+                <h2>Recently played</h2>
                 <div class="row-albums">
                     <div class="album">
                             <div class="cover">
                                 <img src="./img/metal_lifting.jpg" alt="metal">
                             </div>
-                            <h4 class="txt-white">Heavy Metal</h4>
+                            <h4>Heavy Metal</h4>
                             <h5>Subtitle</h5>
                     </div>
                     <div class="album">
                             <div class="cover">
                                 <img src="./img/stranger.jpeg" alt="stranger things">
                             </div>
-                            <h4 class="txt-white">Stranger Things, Vol. 1 (a Netflix Original Series Soundtrac)</h4>
+                            <h4>Stranger Things, Vol. 1 (a Netflix Original Series Soundtrac)</h4>
                             <h5>Kyle Dixon & Michael Stein</h5>
                     </div>
                     <div class="album">
                             <div class="cover">
                                 <img src="./img/aquietplace.jpeg" alt="a quiet place">
                             </div>
-                            <h4 class="txt-white">A quiet place</h4>
+                            <h4>A quiet place</h4>
                             <h5>Subtitle</h5>
                     </div>
                     <div class="album">
                             <div class="cover">
                                 <img src="./img/split.jpeg" alt="split">
                             </div>
-                            <h4 class="txt-white">Split</h4>
+                            <h4>Split</h4>
                             <h5>Subtitle</h5>
                     </div>
                     <div class="album">
                             <div class="cover">
                                 <img src="./img/cure.jpeg" alt="cure">
                             </div>
-                            <h4 class="txt-white">A cure for wellness</h4>
+                            <h4>A cure for wellness</h4>
                             <h5>Subtitle</h5>
                     </div>
                     <div class="album">
                             <div class="cover">
                                 <img src="./img/sinister.jpeg" alt="sinister">
                             </div>
-                            <h4 class="txt-white">Sinister</h4>
+                            <h4>Sinister</h4>
                             <h5>Subtitle</h5>
                     </div>
                 </div>
 
                 <!-- Second Row -->
-                <h2 class="txt-white">Creato per John Doe</h2>
+                <h2>Creato per John Doe</h2>
                 <p>Più ascolti più, più accurati saranno i suggerimenti.</p>
                 <div class="row-albums">
                     <div class="album">
                         <div class="cover">
                             <img src="./img/radar.jpeg" alt="radar">
                         </div>
-                        <h4 class="txt-white">Release Radar</h4>
+                        <h4>Release Radar</h4>
                     </div>
                     <div class="album">
                         <div class="cover">
                             <img src="./img/mixdaily.jpeg" alt="mix">
                         </div>
-                        <h4 class="txt-white">Daily Mix 1</h4>
+                        <h4>Daily Mix 1</h4>
                     </div>
                 </div>
 
                 <!-- Third Row -->
-                <h2 class="txt-white">Artisti più popolari</h2>
+                <h2>Artisti più popolari</h2>
                 <p>Più ascolti più, più accurati saranno i suggerimenti.</p>
                 <div class="row-albums">
                     <div class="album">
                         <div class="cover">
                             <img src="./img/youg.jpeg" alt="lana">
                         </div>
-                        <h4 class="txt-white">Lana del Rey</h4>
+                        <h4>Lana del Rey</h4>
                     </div>
                     <div class="album">
                         <div class="cover">
                             <img src="./img/einaudi.jpeg" alt="einauidi">
                         </div>
-                        <h4 class="txt-white">Ludovico Einaudi</h4>
+                        <h4>Ludovico Einaudi</h4>
                     </div>
                 </div>
             </div>
