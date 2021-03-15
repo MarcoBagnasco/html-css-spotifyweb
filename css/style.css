@@ -355,7 +355,10 @@ i{
 }
 .row-albums .album img{
     width: 100%;
-    margin-bottom: 1rem;
+    display: block;
+}
+.row-albums .album h4{
+    margin-top: 1rem;
 }
 .row-albums .album h4,
 .row-albums .album h5{
@@ -364,6 +367,7 @@ i{
 .gallery .row-albums:last-child img{
     border-radius: 50%;
 }
+/* Layover */
 .album .cover{
     position: relative;
 }
@@ -385,6 +389,14 @@ i{
 .album .cover:hover::after{
     display: inline-block;
 }
+.album .cover:active::after{
+    color: #adff2f;
+    transform: translate(-50%, -50%)
+                rotate(720deg)
+                scale(1.3);
+    transition: transform .6s ease-out, color .1s .5s;
+}
+
 /* RESPONSIVE MAIN CONTENT*/
 /* 768px <= Screen < 1200px */
 @media screen and (max-width: 1199px){
