@@ -327,18 +327,29 @@ i{
 .gallery .gallery-menu li:last-child{
     margin-right: 0;
 }
-.gallery .gallery-menu li:first-child{
+.gallery .gallery-menu li{
     position: relative;
 }
-.gallery .gallery-menu li:first-child::after{
+.gallery .gallery-menu label{
+    cursor: pointer;
+}
+.gallery .gallery-menu label::after{
     position: absolute;
     bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
     content: '';
     display: inline-block;
-    width: 33%;
+    width: 30px;
     border-bottom: 2px solid #adff2f;
+    opacity: 0;
+}
+.gallery .gallery-menu input:checked + label::after{
+    opacity: 1;
+}
+.gallery .gallery-menu input{
+    position: absolute;
+    opacity: 0;
 }
 
 /* Albums */
