@@ -71,7 +71,6 @@ i{
     border-radius: 25px;
 }
 .stick::after{
-    display: none;
     content: '';
     position: absolute;
     top: -7px;
@@ -80,6 +79,7 @@ i{
     height: 14px;
     border-radius: 50%;
     background-color: #fff;
+    opacity: 0;
 }
 .stick:hover{
     cursor: pointer;
@@ -88,7 +88,7 @@ i{
     border-color: #adff2f;
 }
 .stick:hover::after{
-    display: inline-block;
+    opacity: 1;
 }
 
 /* APP MAIN */
@@ -308,6 +308,13 @@ i{
     outline: none;
     box-shadow: 0 0 5px 2px inset #adff2f;
 }
+/* RESPONSIVE FIXBAR */
+/* Screen height <= 300px */
+@media screen and (max-height: 300px){
+    .main-content .fix-bar{
+        display: none;
+    }
+}
 
 /* Gallery */
 .main-content .gallery{
@@ -344,6 +351,7 @@ i{
     border-bottom: 2px solid #adff2f;
     opacity: 0;
 }
+/* Gallery Menu Interaction */
 .gallery .gallery-menu input:checked + label::after{
     opacity: 1;
 }
@@ -475,7 +483,7 @@ i{
 .central-footer .player-icons i{
     margin-right: 20px;
 }
-.central-footer .player-icons i:last-child{
+.central-footer .player-icons i:last-child:not(label > i){
     margin-right: 0;
 }
 .central-footer .player-icons #play{
@@ -494,6 +502,37 @@ i{
 .central-footer .player-bar .stick{
     margin: 0 5%;
     flex-grow: 1;
+}
+/* Player Bar Animation */
+.central-footer .player-bar input{
+    position: absolute;
+    opacity: 0;
+}
+.central-footer .player-bar .stick::before{
+    animation: move 20s linear forwards;
+}
+.central-footer .player-bar .stick::after{
+    animation: follow 20s linear forwards;
+}
+.central-footer .player-bar input:checked + .stick::before,
+.central-footer .player-bar input:checked + .stick::after{
+    animation-play-state: paused;
+}
+@keyframes move{
+    from{
+        width: 20%;
+    }
+    to{
+        width: 100%;
+    }
+}
+@keyframes follow{
+    from{
+        left: 18%;
+    }
+    to{
+        left: 98%;
+    }
 }
 
 /* Right Footer */
