@@ -22,12 +22,12 @@
 </head>
 <body>
     <!-- APP MAIN -->
-    <main class="app-main">
+    <main class="app-main flex">
         <!-- SIDEBAR -->
-        <section class="sidebar ov-hidden">
+        <section class="sidebar flex column jc-between ov-hidden">
             
             <!-- Top Sidebar -->
-            <div class="top-sidebar ov-hidden">
+            <div class="top-sidebar grow-1 ov-hidden">
                 <img class="logo" src="./img/logo.svg" alt="logo">
                 <!-- Side Menu -->
                 <nav class="side-menu">
@@ -51,7 +51,7 @@
                 </nav>
                 <!-- Playlist -->
                 <h4>PLAYLIST</h4>
-                <div class="create-playlist  hover-white">
+                <div class="create-playlist flex ai-center hover-white">
                     <div class="plus-create"><i class="fas fa-plus"></i></div>
                     <span class="text-create">Crea Playlist</span>
                 </div>
@@ -76,7 +76,7 @@
                     Installa app
                 </div>
                 <!-- User -->
-                <div class="user txt-white bold">
+                <div class="user txt-white bold flex ai-center">
                     <div class="profile ov-hidden">
                         <img src="./img/profile.svg" alt="">
                     </div>
@@ -86,7 +86,7 @@
         </section>
         
         <!-- MOBILE SIDEBAR -->
-        <section class="mobile-sidebar ov-hidden">
+        <section class="mobile-sidebar column jc-between ov-hidden">
             <!-- Top -->
             <div class="top-mobile-sidebar">
                 <img class="logo-mobile" src="./img/logo-small.svg" alt="logo">
@@ -104,9 +104,9 @@
         </section>
 
         <!-- MAIN CONTENT -->
-        <section class="main-content ov-hidden">
+        <section class="main-content grow-1 ov-hidden">
             <!-- Fix Bar-->
-            <div class="fix-bar">
+            <div class="fix-bar flex ai-center">
                 <button class="upper txt-white bold bigger">effettua l'upgrade</button>
             </div>
 
@@ -116,27 +116,27 @@
                 <nav class="gallery-menu">
                     <ul class="upper bold">
                         <li>
-                            <input type="radio" name="line" id="menu-1" checked>
+                            <input type="radio" name="line" id="menu-1" checked> <!-- Ghost Switch -->
                             <label for="menu-1">in evidenza</label>
                         </li>
                         <li>
-                            <input type="radio" name="line" id="menu-2">
+                            <input type="radio" name="line" id="menu-2"> <!-- Ghost Switch -->
                             <label for="menu-2">podcast</label>
                         </li>
                         <li>
-                            <input type="radio" name="line" id="menu-3">
+                            <input type="radio" name="line" id="menu-3"> <!-- Ghost Switch -->
                             <label for="menu-3">classifiche</label>
                         </li>
                         <li>
-                            <input type="radio" name="line" id="menu-4">
+                            <input type="radio" name="line" id="menu-4"> <!-- Ghost Switch -->
                             <label for="menu-4">generi e mood</label>
                         </li>
                         <li>
-                            <input type="radio" name="line" id="menu-5">
+                            <input type="radio" name="line" id="menu-5"> <!-- Ghost Switch -->
                             <label for="menu-5">nuove uscite</label>
                         </li>
                         <li>
-                            <input type="radio" name="line" id="menu-6">
+                            <input type="radio" name="line" id="menu-6"> <!-- Ghost Switch -->
                             <label for="menu-6">scopri</label> 
                         </li>
                     </ul>
@@ -145,7 +145,7 @@
                 <!-- Albums -->
                 <!-- First Row -->
                 <h2>Recently played</h2>
-                <div class="row-albums">
+                <div class="row-albums flex">
                     <div class="album">
                             <div class="cover">
                                 <img src="./img/metal_lifting.jpg" alt="metal">
@@ -193,7 +193,7 @@
                 <!-- Second Row -->
                 <h2>Creato per John Doe</h2>
                 <p>Più ascolti più, più accurati saranno i suggerimenti.</p>
-                <div class="row-albums">
+                <div class="row-albums flex">
                     <div class="album">
                         <div class="cover">
                             <img src="./img/radar.jpeg" alt="radar">
@@ -211,7 +211,7 @@
                 <!-- Third Row -->
                 <h2>Artisti più popolari</h2>
                 <p>Più ascolti più, più accurati saranno i suggerimenti.</p>
-                <div class="row-albums">
+                <div class="row-albums flex">
                     <div class="album">
                         <div class="cover">
                             <img src="./img/youg.jpeg" alt="lana">
@@ -230,10 +230,10 @@
     </main>
 
     <!-- APP FOOTER -->
-    <footer class="app-footer">
+    <footer class="app-footer flex jc-between">
         <!-- Left Footer -->
-        <div class="left-footer">
-            <div class="current">
+        <div class="left-footer flex ai-center jc-between">
+            <div class="current flex ai-center">
                 <img src="./img/sinister.jpeg" alt="sinister">
                 <div class="caption">
                     <h5 class="txt-white">Sinister</h5>
@@ -247,9 +247,9 @@
         </div>
 
         <!-- Central Footer -->
-        <div class="central-footer txt-white">
+        <div class="central-footer txt-white flex column ai-center">
             <!-- Player Icons -->
-            <div class="player-icons">
+            <div class="player-icons flex ai-center">
                 <i class="fas fa-random"></i>
                 <i class="fas fa-step-backward"></i>
                 <label for="bar"><i id="play" class="far fa-play-circle bigger"></i></label>
@@ -257,20 +257,20 @@
                 <i class="fas fa-redo-alt"></i>
             </div>
             <!-- Player Bar -->
-            <div class="player-bar">
+            <div class="player-bar flex ai-center">
                 <span>0:25</span>
                 <input type="checkbox" name="bar" id="bar"> <!-- Ghost Switch -->
-                <div class="stick"></div>
+                <div class="stick grow-1"></div>
                 <span>4:35</span>
             </div>
         </div>
 
         <!-- Right Footer -->
-        <div class="right-footer txt-white">
+        <div class="right-footer txt-white flex ai-center">
             <i class="fas fa-list"></i>
             <i class="fas fa-desktop"></i>
             <i class="fas fa-volume-up"></i>
-            <div class="stick"></div>
+            <div class="stick grow-1"></div>
         </div>
     </footer>
 </body>
